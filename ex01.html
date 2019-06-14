@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+ 
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+     <link href="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.css" rel="stylesheet">
+    <link  href="https://unpkg.com/bootstrap-table@1.14.2/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.css"  rel="stylesheet">
+
+    <link         href="https://unpkg.com/bootstrap-table@1.14.2/dist/extensions/sticky-header/bootstrap-table-sticky-header.css"   rel="stylesheet">
+
+  
+    <title>Document</title>
+    <style>
+
+
+        .wrapper.container {
+            margin: 5% auto;
+       
+                overflow:auto;
+
+        }
+     
+.sticky-header-container {
+left: 3em;
+right: 3em;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper  container">
+
+
+
+        <table class="table table-bordered  table-striped  table-md " id="table" data-show-toggle="ture"
+             data-toggle="table" data-sort-class="table-active" data-show-fullscreen="true" data-height="960"
+             data-show-columns="true" data-sort-order="desc"
+            data-ajax="ajaxRequest" data-pagination="true" data-search="true" 
+     data-sortable="true" data-show-footer="true"
+ 
+     data-footer-style="footerStyle"
+     data-buttons-align="left"
+     data-buttons-class="info"
+     >
+
+            <thead class="thead-dark">
+                <tr>
+                    <th data-sortable="true" data-field="Number" data-footer-formatter="idFormatter">組別</th>
+                    <th data-sortable="true" data-field="Title_of_the_Work" data-footer-formatter="nameFormatter">作品名稱
+                    </th>
+                    <th data-sortable="true" data-field="School">學校</th>
+                    <th data-sortable="true" data-field="Major">系別</th>
+                    <th data-sortable="true" data-field="status">參賽狀態</th>
+                    <th data-sortable="true" data-field="Registration_date">報名日期</th>
+                    <th data-sortable="true" data-field="Teacher_Number1_Name">老師1姓名</th>
+                    <th data-sortable="true" data-field="Teacher_Number1_Fax ">老師1傳真</th>
+                    <th data-sortable="true" data-field="Teacher_Number1_Cell_Phone ">老師1行動電話</th>
+                    <th data-sortable="true" data-field="Teacher_Number1_Phone">老師1聯絡電話</th>
+                    <th data-sortable="true" data-field="Teacher_Number1_E-mail ">老師1電子郵件</th>
+                    <th data-sortable="true" data-field="Teacher_Number1_Other_E-mail ">老師1備用電子郵件</th>
+                    <th data-sortable="true" data-field="Teacher_Number1_address ">老師1通訊地址</th>
+                    <th data-sortable="true" data-field="Teacher_Number1_Major ">老師1_科系所</th>
+                    <th data-sortable="true" data-field="before_holtek_game">曾參加過的盛群盃</th>
+                    <th data-sortable="true" data-field="Teacher_Number2_Name">老師2姓名</th>
+                    <th data-sortable="true" data-field="Teacher_Number2_ Fax ">老師2傳真</th>
+                    <th data-sortable="true" data-field="Teacher_Number2_Cell_Phone">老師2行動電話</th>
+                    <th data-sortable="true" data-field="Teacher_Number2_Phone ">老師2聯絡電話</th>
+                    <th data-sortable="true" data-field="Teacher_Number2_E-mail ">老師2電子郵件</th>
+                    <th data-sortable="true" data-field="Teacher_Number2_Other_E-mail ">老師2備用電子郵件</th>
+                    <th data-sortable="true" data-field="Teacher_Number2_address">老師2通訊地址</th>
+                    <th data-sortable="true" data-field="Teacher_Number2_Major ">老師2_科系所</th>
+                    <th data-sortable="true" data-field="Student1_Name ">學生1姓名</th>
+                    <th data-sortable="true" data-field="Student1_Cell_Phone ">學生1行動電話</th>
+                    <th data-sortable="true" data-field="Student1_Phone ">學生1聯絡電話</th>
+                    <th data-sortable="true" data-field="Student1_E-mail ">學生1電子郵件</th>
+                    <th data-sortable="true" data-field="Student1_Other_E-mail ">學生1備用電子郵件</th>
+                    <th data-sortable="true" data-field="Student1_address ">學生1通訊地址</th>
+                    <th data-sortable="true" data-field="Student1_Major ">學生1科系所</th>
+                    <th data-sortable="true" data-field="Student2_Name ">學生2姓名</th>
+                    <th data-sortable="true" data-field="Student2_Cell_Phone ">學生2行動電話</th>
+                    <th data-sortable="true" data-field="Student2_Phone ">學生2聯絡電話</th>
+                    <th data-sortable="true" data-field="Student2_E-mail ">學生2電子郵件</th>
+                    <th data-sortable="true" data-field="Student2_Other_E-mail ">學生2備用電子郵件</th>
+                    <th data-sortable="true" data-field="Student3_Name ">學生3姓名</th>
+                    <th data-sortable="true" data-field="Student3_Cell_Phone ">學生3行動電話</th>
+                    <th data-sortable="true" data-field="Student3_Phone ">學生3聯絡電話</th>
+                    <th data-sortable="true" data-field="Student3_E-mail ">學生3電子郵件</th>
+                    <th data-sortable="true" data-field="Student3_Other_E-mail ">學生3備用電子郵件</th>
+                    <th data-sortable="true" data-field="Student4_Name ">學生4姓名</th>
+                    <th data-sortable="true" data-field=" Student4_Cell_Phone">學生4行動電話</th>
+                    <th data-sortable="true" data-field="Student4_Phone ">學生4聯絡電話</th>
+                    <th data-sortable="true" data-field="Student4_E-mail ">學生4電子郵件</th>
+                    <th data-sortable="true" data-field="Student4_Other_E-mail ">學生4備用電子郵件</th>
+                    <th data-sortable="true" data-field="Student5_Name ">學生5姓名</th>
+                    <th data-sortable="true" data-field="Student5_Cell_Phone ">學生5聯絡電話</th>
+                    <th data-sortable="true" data-field="Student5_E-mail "> 學生5電子郵件</th>
+                    <th data-sortable="true" data-field="Student5_Other_E-mail ">學生5備用電子郵件</th>
+                </tr>
+            </thead>
+               <tbody>
+               </tbody>
+        </table>
+     
+    </div>
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+ <script src="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.js"></script>
+ <script src="https://unpkg.com/bootstrap-table@1.14.2/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.js">
+ </script>
+ <script src="https://unpkg.com/bootstrap-table@1.14.2/dist/extensions/toolbar/bootstrap-table-toolbar.min.js"></script>
+<script
+    src="https://unpkg.com/bootstrap-table@1.14.2/dist/extensions/sticky-header/bootstrap-table-sticky-header.min.js">
+</script>
+    <script src="index.js"> </script>
+
+
+</body>
+
+</html>
